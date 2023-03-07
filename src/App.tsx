@@ -1,51 +1,61 @@
 import React, {useState} from 'react';
 import css from './App.module.css'
-import {SuperBtn} from "./components/SuperBtn/SuperBtn";
-import eye from "./assets/img/eye.svg"
-import selector from "./assets/img/selector.svg"
+import {Display} from "./components/blocks/Display/Display";
+import {FlexWrapTablo, WidgetType} from "./components/blocks/flexWrapTablo/FlexWrapTablo";
+import {Toggler} from "./components/Toggler/Toggler";
 
 function App() {
-    const [toggle, setToggle] = useState(true)
+    const [toggle, setToggle] = useState<boolean>(true)
+    const [widget, setWidget] = useState<WidgetType[]>( ["display", "operators", "numbers", "equal"])
+    const [widgets, setWidgets] = useState<WidgetType[]>([])
+
+    const handlerOnDrag = (e: React.DragEvent, widgetType: any) => {
+        e.dataTransfer.setData('widgetType', widgetType)
+    }
+
+    const handlerOnDrop = (e: React.DragEvent) => {
+        const widgetType = e.dataTransfer.getData('widgetType') as any
+        console.log("aaa", widgetType)
+        if (!widgets.includes(widgetType)) {
+            setWidgets([...widgets, widgetType])
+            setWidget(widget.filter(el => el !== widgetType))
+        }
+
+    }
+    const handlerDragOver = (e: React.DragEvent) => {
+      e.preventDefault()
+    }
 
     return (
         <div className={css.app}>
             <div className={css.blocks}>
-                <div className={css.block}>
-                    <div className={css.tablo}>
-                        <div className={css.display}>
-                            1000 000
-                        </div>
-                    </div>
-                    <div className={css.tablo}>
-                        <SuperBtn>/</SuperBtn>
-                        <SuperBtn>x</SuperBtn>
-                        <SuperBtn>-</SuperBtn>
-                        <SuperBtn>+</SuperBtn>
-                    </div>
-                    <div className={css.gridTablo}>
-                        <SuperBtn>7</SuperBtn>
-                        <SuperBtn>8</SuperBtn>
-                        <SuperBtn>9</SuperBtn>
-                        <SuperBtn>4</SuperBtn>
-                        <SuperBtn>5</SuperBtn>
-                        <SuperBtn>6</SuperBtn>
-                        <SuperBtn>1</SuperBtn>
-                        <SuperBtn>2</SuperBtn>
-                        <SuperBtn>3</SuperBtn>
-                        <SuperBtn style={{gridRow: '4', gridColumnStart: "1", gridColumnEnd: "3"}}>0</SuperBtn>
-                        <SuperBtn>,</SuperBtn>
-                    </div>
-                    <div className={css.tablo}>
-                        <SuperBtn xType={"secondary"}>=</SuperBtn>
-                    </div>
+                <div className={`${css.block} ${toggle ? css.dash : ''}`}>
+                    {widget.map((widget, index) => {
+                        return  <FlexWrapTablo
+                            key={index}
+                            draggable={toggle}
+                            onDragStart={(e)=> handlerOnDrag(e, widget)}
+                            disabled={!toggle}
+                            widgetType={widget}
+                            opacity>
+                            <Display disabled={toggle}/>
+                        </FlexWrapTablo>
+                    })}
                 </div>
                 <div>
-                    <div className={css.toggler}>
-                        <button onClick={()=>setToggle(!toggle)} disabled={toggle} className={css.toggleButton}><img src={eye} alt="eye"/> Runtime</button>
-                        <button onClick={()=>setToggle(!toggle)} disabled={!toggle} className={css.toggleButton}><img src={selector} alt="selector"/>Constructor</button>
-                    </div>
-                    <div className={css.block}>
-                        bbb
+                   <Toggler disabled={toggle} toggleHandler={()=>setToggle(!toggle)}/>
+                    <div className={`${css.block} ${toggle ? css.dash : ''}`} onDrop={handlerOnDrop} onDragOver={handlerDragOver}>
+
+                        {widgets.map((widget, index) => {
+                            return  <FlexWrapTablo
+                                key={index}
+                                draggable={toggle}
+                                onDragStart={(e)=> handlerOnDrag(e, widget)}
+                                disabled={toggle}
+                                widgetType={widget} opacity={false}>
+                                <Display disabled={toggle}/>
+                            </FlexWrapTablo>
+                        })}
                     </div>
                 </div>
 

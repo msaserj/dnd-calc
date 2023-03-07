@@ -1,0 +1,25 @@
+
+.display {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 4px 8px;
+    gap: 10px;
+    box-sizing: border-box;
+    width: 232px;
+    height: 52px;
+    left: 80px;
+    top: 110px;
+    background: #F3F4F6;
+    border-radius: 6px;
+    font-family: 'Inter', serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 44px;
+}
+
+.disabled {
+    opacity: 0.5;
+}

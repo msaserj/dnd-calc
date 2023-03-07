@@ -13,91 +13,17 @@
     box-sizing: border-box;
     width: 243px;
     min-height: 448px;
-    border: 2px dashed #C4C4C4;
     border-radius: 6px;
     gap: 12px
 }
 
-.toggler {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: normal;
-    padding: 1px;
-    width: 243px;
-    height: 38px;
-    margin-bottom: 40px;
-    background: #F3F4F6;
-    border-radius: 6px;
+.dash {
+    border: 2px dashed #C4C4C4;
 }
 
-.toggleButton {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 12px;
-    gap: 10px;
-    height: 36px;
-    background: #FFFFFF;
-    border: 1px solid #E2E3E5;
-    border-radius: 5px;
-    flex: none;
-    /*order: 1;*/
-    flex-grow: 1;
-}
-.toggleButton:disabled {
-    gap: 10px;
-    background: #F3F4F6;
-    border: 1px solid #F3F4F6;
-}
-.toggleButton:hover {
-    background: #9bb8f3;
-    color: #002a81;
+.background {
+    background: #d1e0ff;
 }
 
-.tablo {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06), 0 4px 6px rgba(0, 0, 0, 0.1);
-    gap: 8px
-}
-.gridTablo {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    border-radius: 4px;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06), 0 4px 6px rgba(0, 0, 0, 0.1);
-    grid-gap: 8px
-}
 
-.display {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 4px 8px;
-    gap: 10px;
-    box-sizing: border-box;
-    width: 232px;
-    height: 52px;
-    left: 80px;
-    top: 110px;
-    background: #F3F4F6;
-    border-radius: 6px;
-    font-family: 'Inter', serif;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 36px;
-    line-height: 44px;
-}
+
