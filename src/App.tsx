@@ -40,7 +40,7 @@ function App() {
                   key={index}
                   draggable={toggle}
                   onDragStart={e => handlerOnDrag(e, widget)}
-                  disabled={toggle}
+                  disabled={true}
                   widgetType={widget}
                   opacity={toggle}
                 />
@@ -52,10 +52,16 @@ function App() {
         <div>
           <Toggler disabled={toggle} toggleHandler={() => setToggle(!toggle)} />
           <div className={`${css.block} ${toggle ? css.dash : ''}`} onDrop={handlerOnDrop} onDragOver={handlerDragOver}>
+            {toggle && (
+              <div className={css.dragHere}>
+                <p>Перетащите сюда</p>
+                <p>любой элемент из левой панели</p>
+              </div>
+            )}
             {widgets.map((widget, index) => {
               return (
                 <FlexWrapTablo
-                  onDoubleClick={() => deleteHandler(widget)}
+                  onDoubleClick={() => toggle && deleteHandler(widget)}
                   key={index}
                   draggable={toggle}
                   onDragStart={e => handlerOnDrag(e, widget)}

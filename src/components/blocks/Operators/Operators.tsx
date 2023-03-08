@@ -10,13 +10,12 @@ type OperatorsType = {
 export const Operators: React.FC<OperatorsType> = ({ disabled }) => {
   const dispatch = useAppDispatch();
   const opers = ['/', 'x', '-', '+'];
-
+  const setOperand = (value: string) => {
+    dispatch(setOperatorAC({ value }));
+  };
   return (
     <>
       {opers.map((el, index) => {
-        const setOperand = (value: string) => {
-          dispatch(setOperatorAC({ value }));
-        };
         return (
           <SuperBtn onClick={() => setOperand(el)} key={index} disabled={disabled}>
             {el}

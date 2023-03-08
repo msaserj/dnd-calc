@@ -6,10 +6,15 @@ const calcSlice = createSlice({
   initialState: {
     firstNum: '0',
     secondNum: '0',
-    operator: null
+    operator: null,
+    overwrite: false
   } as StateType,
   reducers: {
     setNumber: (state, action: PayloadAction<{ value: string }>) => {
+      if (state.overwrite) {
+        state.firstNum = action.payload.value;
+        state.overwrite = false;
+      }
       if (action.payload.value === '0' && state.firstNum === '0') return state;
       if (action.payload.value === '.' && state.firstNum.includes('.')) return state;
       if (state.firstNum === '0') {
@@ -29,15 +34,17 @@ const calcSlice = createSlice({
         state.operator = action.payload.value;
         state.secondNum = state.firstNum;
         state.firstNum = '0';
+      } else {
+        state.operator = action.payload.value;
+        state.secondNum = calculator(state);
+        state.firstNum = '0';
       }
-      state.secondNum = calculator(state);
-      state.operator = action.payload.value;
-      state.firstNum = '0';
     },
     clearAC: state => {
       state.firstNum = '0';
       state.secondNum = '0';
       state.operator = null;
+      state.overwrite = false;
     },
 
     equalAC: state => {
@@ -47,6 +54,7 @@ const calcSlice = createSlice({
       state.firstNum = calculator(state);
       state.secondNum = '0';
       state.operator = null;
+      state.overwrite = true;
     }
   }
 });
@@ -59,4 +67,5 @@ export type StateType = {
   firstNum: string;
   secondNum: string;
   operator: string | null;
+  overwrite: boolean;
 };
