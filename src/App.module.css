@@ -1,29 +1,25 @@
-
 .blocks {
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 40px
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
 }
 .block {
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    width: 243px;
-    min-height: 448px;
-    border-radius: 6px;
-    gap: 12px
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 243px;
+  min-height: 448px;
+  border-radius: 6px;
+  gap: 12px;
 }
 
 .dash {
-    border: 2px dashed #C4C4C4;
+  border: 2px dashed #c4c4c4;
 }
 
 .background {
-    background: #d1e0ff;
+  background: #d1e0ff;
 }
-
-
-

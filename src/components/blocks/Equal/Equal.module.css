@@ -1,12 +1,12 @@
 .tablo {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06), 0 4px 6px rgba(0, 0, 0, 0.1);
-    gap: 8px
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06), 0 4px 6px rgba(0, 0, 0, 0.1);
+  gap: 8px;
 }
