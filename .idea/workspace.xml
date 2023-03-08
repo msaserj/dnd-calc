@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1332df7e-5b33-4ea4-aac1-f785a5e1b6cc" name="Changes" comment="fix: layout">
+    <list default="true" id="1332df7e-5b33-4ea4-aac1-f785a5e1b6cc" name="Changes" comment="fix: prettier">
+      <change afterPath="$PROJECT_DIR$/src/utils/Calculator.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Toggler/Toggler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Toggler/Toggler.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blocks/Display/Display.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/Display/Display.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blocks/Equal/Equal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/Equal/Equal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blocks/Numbers/Numbers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/Numbers/Numbers.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blocks/Operators/Operators.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/Operators/Operators.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blocks/Toggler/Toggler.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blocks/Toggler/Toggler.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/calc-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/calc-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +46,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/msa/ReactSamurai/dnd-calc/dnd-calc/src/components/blocks/Operators",
+    "last_opened_file_path": "/home/msa/ReactSamurai/dnd-calc/dnd-calc",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -65,6 +76,7 @@
       <option name="presentableId" value="Default" />
       <updated>1678188009641</updated>
       <workItem from="1678188010799" duration="35165000" />
+      <workItem from="1678276755080" duration="7719000" />
     </task>
     <task id="LOCAL-00001" summary="start: calc layout">
       <created>1678196527247</created>
@@ -94,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678234392247</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fix: prettier">
+      <created>1678277003254</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678277003254</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,6 +136,7 @@
     <MESSAGE value="add: drag and drop" />
     <MESSAGE value="add: base operations" />
     <MESSAGE value="fix: layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: layout" />
+    <MESSAGE value="fix: prettier" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: prettier" />
   </component>
 </project>

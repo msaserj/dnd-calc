@@ -1,13 +1,10 @@
-import React, { BaseHTMLAttributes, DetailedHTMLProps } from "react";
-import css from "./Numbers.module.css";
-import { SuperBtn } from "../../SuperBtn/SuperBtn";
-import { useAppDispatch, useAppSelector } from "../../../hooks/hooks";
-import { setNum1AC, setNum2AC } from "../../../store/calc-reducer";
+import React, { BaseHTMLAttributes, DetailedHTMLProps } from 'react';
+import css from './Numbers.module.css';
+import { SuperBtn } from '../../SuperBtn/SuperBtn';
+import { useAppDispatch } from '../../../hooks/hooks';
+import { setNumber } from '../../../store/calc-reducer';
 
-type DefaultPropsType = DetailedHTMLProps<
-  BaseHTMLAttributes<HTMLDivElement>,
-  HTMLDivElement
->;
+type DefaultPropsType = DetailedHTMLProps<BaseHTMLAttributes<HTMLDivElement>, HTMLDivElement>;
 
 type NumbersType = DefaultPropsType & {
   disabled: boolean;
@@ -15,36 +12,32 @@ type NumbersType = DefaultPropsType & {
 
 export const Numbers: React.FC<NumbersType> = ({ disabled, ...restProps }) => {
   const dispatch = useAppDispatch();
-  const operand = useAppSelector((state) => state.calcReducer.operand);
 
-  const numbers = [7, 8, 9, 4, 5, 6, 1, 2, 3];
+  const numbers = ['7', '8', '9', '4', '5', '6', '1', '2', '3'];
+
+  const clickHandler = (ele: string) => {
+    dispatch(setNumber({ value: ele }));
+  };
+
   return (
     <div className={css.gridTablo} {...restProps}>
       {numbers.map((el, index) => {
-        const clickHandler = (ele: any) => {
-          if (!operand || operand === "=") {
-            dispatch(setNum1AC({ value: ele }));
-          } else {
-            dispatch(setNum2AC({ value: ele }));
-          }
-        };
         return (
-          <SuperBtn
-            onClick={() => clickHandler(el)}
-            disabled={disabled}
-            key={index}
-          >
+          <SuperBtn onClick={() => clickHandler(el)} disabled={disabled} key={index}>
             {el}
           </SuperBtn>
         );
       })}
       <SuperBtn
+        onClick={() => clickHandler('0')}
         disabled={disabled}
-        style={{ gridRow: "4", gridColumnStart: "1", gridColumnEnd: "3" }}
+        style={{ gridRow: '4', gridColumnStart: '1', gridColumnEnd: '3' }}
       >
         0
       </SuperBtn>
-      <SuperBtn disabled={disabled}>,</SuperBtn>
+      <SuperBtn onClick={() => clickHandler('.')} disabled={disabled}>
+        ,
+      </SuperBtn>
     </div>
   );
 };

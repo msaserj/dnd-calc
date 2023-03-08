@@ -1,37 +1,62 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { calculator } from '../utils/Calculator';
 
 const calcSlice = createSlice({
-  name: "gliders",
+  name: 'gliders',
   initialState: {
-    num1: 0,
-    num2: 0,
-    result: 0,
-    operand: null,
-  } as InitialStateType,
+    firstNum: '0',
+    secondNum: '0',
+    operator: null
+  } as StateType,
   reducers: {
-    setNum1AC: (state, action: PayloadAction<{ value: number }>) => {
-      state.num1 = action.payload.value;
+    setNumber: (state, action: PayloadAction<{ value: string }>) => {
+      if (action.payload.value === '0' && state.firstNum === '0') return state;
+      if (action.payload.value === '.' && state.firstNum.includes('.')) return state;
+      if (state.firstNum === '0') {
+        state.firstNum = `${action.payload.value}`;
+      } else {
+        state.firstNum = `${state.firstNum}${action.payload.value}`;
+      }
     },
-    setNum2AC: (state, action: PayloadAction<{ value: number }>) => {
-      state.num2 = action.payload.value;
+    setOperatorAC: (state, action: PayloadAction<{ value: string }>) => {
+      if (state.firstNum === '0' && state.secondNum === '0') {
+        return state;
+      }
+      if (state.firstNum === '0') {
+        state.operator = action.payload.value;
+      }
+      if (state.secondNum === '0') {
+        state.operator = action.payload.value;
+        state.secondNum = state.firstNum;
+        state.firstNum = '0';
+      }
+      state.secondNum = calculator(state);
+      state.operator = action.payload.value;
+      state.firstNum = '0';
     },
-    setOperandAC: (state, action: PayloadAction<{ value: string }>) => {
-      state.operand = action.payload.value;
+    clearAC: state => {
+      state.firstNum = '0';
+      state.secondNum = '0';
+      state.operator = null;
     },
-    setEqualAC: (state, action: PayloadAction<{ equal: number }>) => {
-      state.result = action.payload.equal;
-    },
-  },
+
+    equalAC: state => {
+      if (state.operator == null || state.firstNum === '0' || state.secondNum === '0') {
+        return state;
+      }
+      state.firstNum = calculator(state);
+      state.secondNum = '0';
+      state.operator = null;
+    }
+  }
 });
 
-export const { setNum1AC, setNum2AC, setOperandAC, setEqualAC } =
-  calcSlice.actions;
+export const { setNumber, setOperatorAC, clearAC, equalAC } = calcSlice.actions;
 
 export const calcReducer = calcSlice.reducer;
 
-export type InitialStateType = {
-  num1: number;
-  num2: number;
-  result: number;
-  operand: string | null;
+export type StateType = {
+  firstNum: string;
+  secondNum: string;
+  operator: string | null;
 };
