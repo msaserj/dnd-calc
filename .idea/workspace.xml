@@ -1,24 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1332df7e-5b33-4ea4-aac1-f785a5e1b6cc" name="Changes" comment="start: calc layout">
-      <change afterPath="$PROJECT_DIR$/src/components/Toggler/Toggler.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Toggler/Toggler.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/blocks/Display/Display.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/blocks/Display/Display.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/blocks/Equal/Equal.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/blocks/Equal/Equal.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/blocks/Numbers/Numbers.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/blocks/Numbers/Numbers.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/blocks/Operators/Operators.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/blocks/Operators/Operators.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/blocks/Toggler/Toggler.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/blocks/Toggler/Toggler.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/blocks/flexWrapTablo/FlexWrapTablo.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/blocks/flexWrapTablo/FlexWrapTablo.tsx" afterDir="false" />
+    <list default="true" id="1332df7e-5b33-4ea4-aac1-f785a5e1b6cc" name="Changes" comment="add: drag and drop">
+      <change afterPath="$PROJECT_DIR$/src/hooks/hooks.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/calc-reducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blocks/Display/Display.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/Display/Display.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blocks/Equal/Equal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/Equal/Equal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blocks/Numbers/Numbers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/Numbers/Numbers.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blocks/Operators/Operators.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/Operators/Operators.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blocks/flexWrapTablo/FlexWrapTablo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/flexWrapTablo/FlexWrapTablo.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +27,7 @@
         <option value="SCSS File" />
         <option value="TypeScript JSX File" />
         <option value="CSS File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -79,7 +76,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1678188009641</updated>
-      <workItem from="1678188010799" duration="26838000" />
+      <workItem from="1678188010799" duration="33642000" />
     </task>
     <task id="LOCAL-00001" summary="start: calc layout">
       <created>1678196527247</created>
@@ -88,7 +85,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678196527247</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add: drag and drop">
+      <created>1678227265198</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678227265198</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,6 +111,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="start: calc layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="start: calc layout" />
+    <MESSAGE value="start: drag and drop" />
+    <MESSAGE value="add: drag and drop" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: drag and drop" />
   </component>
 </project>

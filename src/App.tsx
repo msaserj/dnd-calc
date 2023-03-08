@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import css from './App.module.css'
-import {Display} from "./components/blocks/Display/Display";
 import {FlexWrapTablo, WidgetType} from "./components/blocks/flexWrapTablo/FlexWrapTablo";
 import {Toggler} from "./components/Toggler/Toggler";
 
@@ -37,9 +36,9 @@ function App() {
                             onDragStart={(e)=> handlerOnDrag(e, widget)}
                             disabled={!toggle}
                             widgetType={widget}
-                            opacity>
-                            <Display disabled={toggle}/>
-                        </FlexWrapTablo>
+                            opacity/>
+
+
                     })}
                 </div>
                 <div>
@@ -51,10 +50,8 @@ function App() {
                                 key={index}
                                 draggable={toggle}
                                 onDragStart={(e)=> handlerOnDrag(e, widget)}
-                                disabled={toggle}
-                                widgetType={widget} opacity={false}>
-                                <Display disabled={toggle}/>
-                            </FlexWrapTablo>
+                                disabled={!toggle}
+                                widgetType={widget} opacity/>
                         })}
                     </div>
                 </div>
