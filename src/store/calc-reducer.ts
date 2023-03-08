@@ -14,13 +14,13 @@ const calcSlice = createSlice({
       if (state.overwrite) {
         state.firstNum = action.payload.value;
         state.overwrite = false;
+      } else {
+        state.firstNum = `${state.firstNum}${action.payload.value}`;
       }
       if (action.payload.value === '0' && state.firstNum === '0') return state;
       if (action.payload.value === '.' && state.firstNum.includes('.')) return state;
       if (state.firstNum === '0') {
         state.firstNum = `${action.payload.value}`;
-      } else {
-        state.firstNum = `${state.firstNum}${action.payload.value}`;
       }
     },
     setOperatorAC: (state, action: PayloadAction<{ value: string }>) => {
