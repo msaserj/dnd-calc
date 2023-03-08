@@ -1,5 +1,5 @@
-import {combineReducers, configureStore} from '@reduxjs/toolkit';
-import {calcReducer} from './calc-reducer';
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import { calcReducer } from './calc-reducer';
 
 export const rootReducer = combineReducers({
   calcReducer: calcReducer

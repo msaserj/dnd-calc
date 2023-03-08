@@ -11,7 +11,6 @@ type TogglerType = {
 };
 
 export const Toggler: React.FC<TogglerType> = ({ disabled, toggleHandler }) => {
-
   const dispatch = useAppDispatch();
   const runtimeHandler = () => {
     toggleHandler();

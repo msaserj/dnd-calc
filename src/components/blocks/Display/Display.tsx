@@ -1,6 +1,6 @@
 import React from 'react';
 import css from './Display.module.css';
-import {useAppSelector} from '../../../hooks/hooks';
+import { useAppSelector } from '../../../hooks/hooks';
 
 type DisplayType = {
   disabled: boolean;

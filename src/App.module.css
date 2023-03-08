@@ -11,9 +11,16 @@
   flex-direction: column;
   box-sizing: border-box;
   width: 243px;
-  min-height: 448px;
+  min-height: 452px;
   border-radius: 6px;
   gap: 12px;
+}
+
+.spacer {
+  padding: 1px;
+  width: 243px;
+  height: 38px;
+  margin-bottom: 40px;
 }
 
 .dash {

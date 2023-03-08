@@ -22,29 +22,40 @@ function App() {
   const handlerDragOver = (e: React.DragEvent) => {
     e.preventDefault();
   };
+  const deleteHandler = (widgetType: WidgetType) => {
+    if (!widget.includes(widgetType)) {
+      setWidgets(widgets.filter(el => el !== widgetType));
+      setWidget([...widget, widgetType]);
+    }
+  };
   return (
     <div className={css.app}>
       <div className={css.blocks}>
-        <div className={`${css.block} ${toggle ? css.dash : ''}`}>
-          {widget.map((widget, index) => {
-            return (
-              <FlexWrapTablo
-                key={index}
-                draggable={toggle}
-                onDragStart={e => handlerOnDrag(e, widget)}
-                disabled={toggle}
-                widgetType={widget}
-                opacity={toggle}
-              />
-            );
-          })}
+        <div>
+          <div className={css.spacer} />
+          <div className={`${css.block} ${toggle ? css.dash : ''}`}>
+            {widget.map((widget, index) => {
+              return (
+                <FlexWrapTablo
+                  key={index}
+                  draggable={toggle}
+                  onDragStart={e => handlerOnDrag(e, widget)}
+                  disabled={toggle}
+                  widgetType={widget}
+                  opacity={toggle}
+                />
+              );
+            })}
+          </div>
         </div>
+
         <div>
           <Toggler disabled={toggle} toggleHandler={() => setToggle(!toggle)} />
           <div className={`${css.block} ${toggle ? css.dash : ''}`} onDrop={handlerOnDrop} onDragOver={handlerDragOver}>
             {widgets.map((widget, index) => {
               return (
                 <FlexWrapTablo
+                  onDoubleClick={() => deleteHandler(widget)}
                   key={index}
                   draggable={toggle}
                   onDragStart={e => handlerOnDrag(e, widget)}
