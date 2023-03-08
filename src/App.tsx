@@ -14,7 +14,6 @@ function App() {
 
     const handlerOnDrop = (e: React.DragEvent) => {
         const widgetType = e.dataTransfer.getData('widgetType') as any
-        console.log("aaa", widgetType)
         if (!widgets.includes(widgetType)) {
             setWidgets([...widgets, widgetType])
             setWidget(widget.filter(el => el !== widgetType))
@@ -34,9 +33,9 @@ function App() {
                             key={index}
                             draggable={toggle}
                             onDragStart={(e)=> handlerOnDrag(e, widget)}
-                            disabled={!toggle}
+                            disabled={toggle}
                             widgetType={widget}
-                            opacity/>
+                            opacity={toggle}/>
 
 
                     })}
@@ -50,8 +49,8 @@ function App() {
                                 key={index}
                                 draggable={toggle}
                                 onDragStart={(e)=> handlerOnDrag(e, widget)}
-                                disabled={!toggle}
-                                widgetType={widget} opacity/>
+                                disabled={toggle}
+                                widgetType={widget} opacity={toggle}/>
                         })}
                     </div>
                 </div>
