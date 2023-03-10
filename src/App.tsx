@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import css from './App.module.css';
-import { FlexWrapTablo, WidgetType } from './components/blocks/flexWrapTablo/FlexWrapTablo';
-import { Toggler } from './components/Toggler/Toggler';
+import {FlexWrapTablo, WidgetType} from './components/blocks/flexWrapTablo/FlexWrapTablo';
+import {Toggler} from './components/Toggler/Toggler';
+import dropHere from "./assets/img/dropHere.svg"
 
 function App() {
   const [toggle, setToggle] = useState<boolean>(true);
@@ -19,8 +20,9 @@ function App() {
       setWidget(widget.filter(el => el !== widgetType));
     }
   };
-  const handlerDragOver = (e: React.DragEvent) => {
+  const handlerDragOver = (e: any) => {
     e.preventDefault();
+    e.target.style.background = 'red'
   };
   const deleteHandler = (widgetType: WidgetType) => {
     if (!widget.includes(widgetType)) {
@@ -54,6 +56,7 @@ function App() {
           <div className={`${css.block} ${toggle ? css.dash : ''}`} onDrop={handlerOnDrop} onDragOver={handlerDragOver}>
             {toggle && (
               <div className={css.dragHere}>
+                <img src={dropHere} alt="dropHere"/>
                 <p>Перетащите сюда</p>
                 <p>любой элемент из левой панели</p>
               </div>
