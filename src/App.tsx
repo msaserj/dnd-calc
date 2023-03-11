@@ -26,7 +26,18 @@ function App() {
       e.target.style.backgroundColor = 'white';
     }
   };
-
+  const dragOverItemHandler = (e: any, widget: string) => {
+    e.preventDefault()
+    if (canvas.includes(widget)) {
+      e.target.style.boxShadow = '0 6px 12px grey'
+    }
+  }
+  const dragLeaveItemHandler = (e: any, widget: string) => {
+    e.preventDefault()
+    if (canvas.includes(widget)) {
+      e.target.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.2)'
+    }
+  }
   const dragOverHandler = (e: any) => {
     e.preventDefault();
     e.target.style.backgroundColor = '#d1e0ff';
@@ -94,6 +105,8 @@ function App() {
                   key={index}
                   draggable={toggle}
                   onDragStart={e => handlerOnDrag(e, widget)}
+                  onDragOver={e=> dragOverItemHandler(e, widget)}
+                  onDragLeave={e=> dragLeaveItemHandler(e, widget) }
                   disabled={toggle}
                   widgetType={widget}
                   editable={toggle}

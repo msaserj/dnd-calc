@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1332df7e-5b33-4ea4-aac1-f785a5e1b6cc" name="Changes" comment="refactor: dnd state to reducer">
+    <list default="true" id="1332df7e-5b33-4ea4-aac1-f785a5e1b6cc" name="Changes" comment="refactor: fig drag number pallets">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SuperBtn/SuperBtn.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SuperBtn/SuperBtn.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/blocks/Display/Display.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/Display/Display.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/blocks/Display/Display.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/Display/Display.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/blocks/flexWrapTablo/FlexWrapTablo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/flexWrapTablo/FlexWrapTablo.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/blocks/flexWrapTablo/FlexWrapTablo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/flexWrapTablo/FlexWrapTablo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/calc-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/calc-reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/dnd-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/dnd-reducer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +68,7 @@
       <workItem from="1678188010799" duration="35165000" />
       <workItem from="1678276755080" duration="16436000" />
       <workItem from="1678357431229" duration="2318000" />
-      <workItem from="1678473929065" duration="12009000" />
+      <workItem from="1678473929065" duration="14277000" />
     </task>
     <task id="LOCAL-00001" summary="start: calc layout">
       <created>1678196527247</created>
@@ -155,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678493594037</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="refactor: fig drag number pallets">
+      <created>1678496946412</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1678496946412</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +184,7 @@
     <MESSAGE value="fix: operations2" />
     <MESSAGE value="add: ondragover" />
     <MESSAGE value="refactor: dnd state to reducer" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: dnd state to reducer" />
+    <MESSAGE value="refactor: fig drag number pallets" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: fig drag number pallets" />
   </component>
 </project>
