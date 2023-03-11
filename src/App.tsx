@@ -24,6 +24,7 @@ function App() {
     if (!canvas.includes(item)) {
       dispatch(dropWidget({ value: item }));
       e.target.style.backgroundColor = 'white';
+      e.target.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.2)'
     }
   };
   const dragOverItemHandler = (e: any, widget: string) => {
@@ -40,7 +41,10 @@ function App() {
   }
   const dragOverHandler = (e: any) => {
     e.preventDefault();
-    e.target.style.backgroundColor = '#d1e0ff';
+    if (!canvas.length) {
+      e.target.style.backgroundColor = '#d1e0ff';
+    }
+
   };
 
   const deleteHandler = (widgetType: string) => {
@@ -48,11 +52,11 @@ function App() {
   };
   const dragLeaveHandler = (e: any) => {
     e.preventDefault();
-    e.target.style.backgroundColor = 'inherit';
+    e.target.style.backgroundColor = 'white';
   };
   const dragEndHandler = (e: any) => {
     e.preventDefault();
-    e.target.style.backgroundColor = 'inherit';
+    e.target.style.backgroundColor = 'white';
   };
   console.log(canvas);
   return (
@@ -83,9 +87,9 @@ function App() {
           <div
             className={`${css.block} ${toggle ? css.dash : ''}`}
             onDrop={dropHandler}
-            onDragEnd={e => dragEndHandler(e)}
+            onDragEnd={dragEndHandler}
             onDragOver={dragOverHandler}
-            onDragLeave={e => dragLeaveHandler(e)}
+            onDragLeave={dragLeaveHandler}
           >
             {toggle && (
               <div className={css.dragHere}>

@@ -5,7 +5,7 @@ export const calculator = (state: StateType) => {
   const prev = parseFloat(secondNum);
   const current = parseFloat(firstNum);
   if (isNaN(prev) || isNaN(current)) return '';
-  let calc: number = 0;
+  let calc: number | string = 0;
   switch (operator) {
     case '+':
       calc = prev + current;
@@ -17,8 +17,20 @@ export const calculator = (state: StateType) => {
       calc = prev * current;
       break;
     case '/':
-      calc = prev / current;
+      if (current === 0) {
+        return calc = "Не определено";
+      } else {
+        calc = prev / current
+      }
+
       break;
   }
+  if (calc.toString().length > 13) {
+    let length = calc.toString().length - 1
+    calc = (calc/Math.pow(10, length)).toString().slice(0, 3) + `e-${length}`
+
+  }
+
   return calc.toString();
 };
+

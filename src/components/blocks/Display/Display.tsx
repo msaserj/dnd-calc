@@ -10,5 +10,5 @@ export const Display: React.FC<DisplayType> = ({ opacity }) => {
   const firstNum = useAppSelector(state => state.calcReducer.firstNum);
 
   const resultStyle = `${css.display} ${opacity && css.disabled}`;
-  return <div className={resultStyle}>{+firstNum.toLocaleString()}</div>;
+  return <div className={resultStyle}>{firstNum}</div>;
 };
