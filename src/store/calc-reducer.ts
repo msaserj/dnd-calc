@@ -14,7 +14,7 @@ const calcSlice = createSlice({
       if (state.overwrite) {
         state.firstNum = action.payload.value;
         state.overwrite = false;
-      } else {
+      } else if (state.firstNum.length < 10) {
         state.firstNum = `${state.firstNum}${action.payload.value}`;
       }
       if (action.payload.value === '0' && state.firstNum === '0') return state;

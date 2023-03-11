@@ -11,7 +11,11 @@ const calcSlice = createSlice({
   initialState: InitialState,
   reducers: {
     dropWidget: (state, action: PayloadAction<{ value: string }>) => {
-      state.canvas.push(action.payload.value);
+      if (action.payload.value === 'display') {
+        state.canvas.unshift(action.payload.value);
+      } else {
+        state.canvas.push(action.payload.value);
+      }
     },
     deleteWidget: (state, action: PayloadAction<{ value: string }>) => {
       state.canvas = state.canvas.filter(widget => widget !== action.payload.value);

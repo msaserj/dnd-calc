@@ -58,7 +58,9 @@ function App() {
                   onDragStart={e => handlerOnDrag(e, widget)}
                   disabled={true}
                   widgetType={widget}
-                  opacity={!canvas.includes(widget)}
+                  opacity={canvas.includes(widget)}
+                  editable={toggle}
+                  visibility={!toggle}
                 />
               );
             })}
@@ -76,9 +78,13 @@ function App() {
           >
             {toggle && (
               <div className={css.dragHere}>
-                <img src={dropHere} alt="dropHere" />
-                <p>Перетащите сюда</p>
-                <p>любой элемент из левой панели</p>
+                {!canvas.length && (
+                  <>
+                    <img src={dropHere} alt="dropHere" />
+                    <p>Перетащите сюда</p>
+                    <p>любой элемент из левой панели</p>
+                  </>
+                )}
               </div>
             )}
             {canvas.map((widget, index) => {
@@ -90,7 +96,7 @@ function App() {
                   onDragStart={e => handlerOnDrag(e, widget)}
                   disabled={toggle}
                   widgetType={widget}
-                  opacity={toggle}
+                  editable={toggle}
                 />
               );
             })}

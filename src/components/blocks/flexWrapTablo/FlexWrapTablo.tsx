@@ -10,13 +10,27 @@ type DefaultPropsType = DetailedHTMLProps<BaseHTMLAttributes<HTMLDivElement>, HT
 type FlexWrapperType = DefaultPropsType & {
   widgetType: string;
   disabled: boolean;
-  opacity: boolean;
+  editable: boolean;
+  opacity?: boolean;
+  visibility?: boolean;
 };
 
-export const FlexWrapTablo: React.FC<FlexWrapperType> = ({ opacity, disabled, widgetType, ...restProps }) => {
+export const FlexWrapTablo: React.FC<FlexWrapperType> = ({
+  visibility,
+  opacity,
+  editable,
+  disabled,
+  widgetType,
+  ...restProps
+}) => {
   return (
-    <div className={`${css.tablo} ${opacity ? css.edit : ''}`} {...restProps}>
-      {widgetType === 'display' && <Display disabled={disabled} />}
+    <div
+      className={`${css.tablo} ${editable ? css.edit : ''} ${opacity ? css.opacity : ''} ${
+        visibility ? css.visibility : ''
+      }`}
+      {...restProps}
+    >
+      {widgetType === 'display' && <Display opacity={opacity} />}
       {widgetType === 'operators' && <Operators disabled={disabled} />}
       {widgetType === 'numbers' && <Numbers disabled={disabled} />}
       {widgetType === 'equal' && <Equal disabled={disabled} />}
