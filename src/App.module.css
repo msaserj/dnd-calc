@@ -31,7 +31,7 @@
   justify-content: center;
   width: 100%;
   height: 100%;
-  background-color: #d9e6ff;
+  /*background-color: #d9e6ff;*/
   left: 0;
   top: 0;
   z-index: -1;
@@ -45,8 +45,4 @@ p {
 
 .dash {
   border: 2px dashed #c4c4c4;
-}
-
-.background {
-  background: #d1e0ff;
 }

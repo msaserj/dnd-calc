@@ -1,8 +1,10 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { calcReducer } from './calc-reducer';
+import { dndReducer } from './dnd-reducer';
 
 export const rootReducer = combineReducers({
-  calcReducer: calcReducer
+  calcReducer,
+  dndReducer
 });
 
 export const store = configureStore({

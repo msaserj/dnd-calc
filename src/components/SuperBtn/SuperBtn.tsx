@@ -13,9 +13,9 @@ export const SuperBtn: React.FC<SuperButtonPropsType> = ({
   disabled,
   ...restProps // все остальные пропсы попадут в объект restProps, там же будет children
 }) => {
-  const finalClassName = `${css.button} ${
-    xType === 'red' ? css.red : xType === 'secondary' ? css.secondary : css.default
-  } ${disabled ? css.disabled : ''} ${className ? className : ''}`;
+  const finalClassName = `${css.button} 
+  ${xType === 'secondary' ? css.secondary : css.default} 
+  ${disabled ? css.disabled : ''} ${className ? className : ''}`;
 
   return (
     <button

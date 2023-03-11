@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { calculator } from '../utils/Calculator';
 
 const calcSlice = createSlice({
-  name: 'gliders',
+  name: 'calc',
   initialState: {
     firstNum: '0',
     secondNum: '0',

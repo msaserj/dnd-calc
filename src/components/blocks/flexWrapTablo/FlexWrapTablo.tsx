@@ -7,10 +7,8 @@ import { Equal } from '../Equal/Equal';
 
 type DefaultPropsType = DetailedHTMLProps<BaseHTMLAttributes<HTMLDivElement>, HTMLDivElement>;
 
-export type WidgetType = 'display' | 'operators' | 'numbers' | 'equal';
-
 type FlexWrapperType = DefaultPropsType & {
-  widgetType: WidgetType;
+  widgetType: string;
   disabled: boolean;
   opacity: boolean;
 };
