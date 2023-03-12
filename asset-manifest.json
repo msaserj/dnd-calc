@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/dnd-calc/static/css/main.20852bc4.css",
+    "main.js": "/dnd-calc/static/js/main.552d09c2.js",
+    "static/js/787.813b05c6.chunk.js": "/dnd-calc/static/js/787.813b05c6.chunk.js",
+    "static/media/dropHere.svg": "/dnd-calc/static/media/dropHere.ff2a0d409c14819260b08f919e659b64.svg",
+    "static/media/eye.svg": "/dnd-calc/static/media/eye.1e033d8501f85bfd21633e578c03792e.svg",
+    "index.html": "/dnd-calc/index.html",
+    "static/media/selector.svg": "/dnd-calc/static/media/selector.40dc10876101ac38240b7a55c8211b97.svg",
+    "main.20852bc4.css.map": "/dnd-calc/static/css/main.20852bc4.css.map",
+    "main.552d09c2.js.map": "/dnd-calc/static/js/main.552d09c2.js.map",
+    "787.813b05c6.chunk.js.map": "/dnd-calc/static/js/787.813b05c6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.20852bc4.css",
+    "static/js/main.552d09c2.js"
+  ]
+}
