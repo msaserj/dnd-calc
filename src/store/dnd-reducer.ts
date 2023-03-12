@@ -10,7 +10,7 @@ const calcSlice = createSlice({
   name: 'dnd',
   initialState: InitialState,
   reducers: {
-    dropWidget: (state, action: PayloadAction<{ value: string }>) => {
+    dropWidget: (state, action: PayloadAction<{ value: WidgetsType }>) => {
       if (action.payload.value === 'display') {
         state.canvas.unshift(action.payload.value);
       } else {
@@ -31,7 +31,9 @@ export const { dropWidget, setToggle, deleteWidget } = calcSlice.actions;
 export const dndReducer = calcSlice.reducer;
 
 export type StateType = {
-  palette: string[];
-  canvas: string[];
+  palette: WidgetsType[];
+  canvas: WidgetsType[];
   toggle: boolean;
 };
+
+export type WidgetsType = "display" | "operators" | "numbers" | "equal" | ""

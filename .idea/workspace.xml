@@ -4,10 +4,7 @@
     <list default="true" id="1332df7e-5b33-4ea4-aac1-f785a5e1b6cc" name="Changes" comment="refactor: fig drag number pallets">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/blocks/Display/Display.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/Display/Display.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/blocks/Display/Display.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/Display/Display.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/calc-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/calc-reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Calculator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Calculator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/dnd-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/dnd-reducer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +23,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />

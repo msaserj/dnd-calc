@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import css from './App.module.css';
-import { FlexWrapTablo } from './components/blocks/flexWrapTablo/FlexWrapTablo';
-import { Toggler } from './components/Toggler/Toggler';
+import {FlexWrapTablo} from './components/blocks/flexWrapTablo/FlexWrapTablo';
+import {Toggler} from './components/Toggler/Toggler';
 import dropHere from './assets/img/dropHere.svg';
-import { useAppDispatch, useAppSelector } from './hooks/hooks';
-import { deleteWidget, dropWidget, setToggle } from './store/dnd-reducer';
+import {useAppDispatch, useAppSelector} from './hooks/hooks';
+import {deleteWidget, dropWidget, setToggle, WidgetsType} from './store/dnd-reducer';
 
 function App() {
-  const [item, setItem] = useState<string>('');
+  const [item, setItem] = useState<WidgetsType>('');
 
   const { canvas, palette, toggle } = useAppSelector(state => state.dndReducer);
   const dispatch = useAppDispatch();
@@ -16,24 +16,27 @@ function App() {
     dispatch(setToggle({ value: !toggle }));
   };
 
-  const handlerOnDrag = (e: React.DragEvent, widgetType: any) => {
-    setItem(widgetType);
-  };
 
-  const dropHandler = (e: any) => {
+  const dragStartItemHandler = (e: React.DragEvent, widgetType: any) => {
+    setItem(widgetType);
+    console.log(widgetType)
+  };
+  const dropHandler = (e: any, widget?: string) => {
+    e.preventDefault()
     if (!canvas.includes(item)) {
       dispatch(dropWidget({ value: item }));
       e.target.style.backgroundColor = 'white';
-      e.target.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.2)'
     }
+    e.target.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.2)'
+    console.log(widget)
   };
-  const dragOverItemHandler = (e: any, widget: string) => {
+  const dragOverItemHandler = (e: any, widget: WidgetsType) => {
     e.preventDefault()
     if (canvas.includes(widget)) {
-      e.target.style.boxShadow = '0 6px 12px grey'
+      e.target.style.boxShadow = '0 6px 12px #8DB3FFFF'
     }
   }
-  const dragLeaveItemHandler = (e: any, widget: string) => {
+  const dragLeaveItemHandler = (e: any, widget: WidgetsType) => {
     e.preventDefault()
     if (canvas.includes(widget)) {
       e.target.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.2)'
@@ -54,11 +57,7 @@ function App() {
     e.preventDefault();
     e.target.style.backgroundColor = 'white';
   };
-  const dragEndHandler = (e: any) => {
-    e.preventDefault();
-    e.target.style.backgroundColor = 'white';
-  };
-  console.log(canvas);
+
   return (
     <div className={css.app}>
       <div className={css.blocks}>
@@ -69,8 +68,8 @@ function App() {
               return (
                 <FlexWrapTablo
                   key={index}
-                  draggable={toggle}
-                  onDragStart={e => handlerOnDrag(e, widget)}
+                  draggable={!canvas.includes(widget)}
+                  onDragStart={e => dragStartItemHandler(e, widget)}
                   disabled={true}
                   widgetType={widget}
                   opacity={canvas.includes(widget)}
@@ -87,18 +86,18 @@ function App() {
           <div
             className={`${css.block} ${toggle ? css.dash : ''}`}
             onDrop={dropHandler}
-            onDragEnd={dragEndHandler}
+
             onDragOver={dragOverHandler}
             onDragLeave={dragLeaveHandler}
           >
             {toggle && (
               <div className={css.dragHere}>
                 {!canvas.length && (
-                  <>
+                  <div>
                     <img src={dropHere} alt="dropHere" />
                     <p>Перетащите сюда</p>
                     <p>любой элемент из левой панели</p>
-                  </>
+                  </div>
                 )}
               </div>
             )}
@@ -108,9 +107,10 @@ function App() {
                   onDoubleClick={() => toggle && deleteHandler(widget)}
                   key={index}
                   draggable={toggle}
-                  onDragStart={e => handlerOnDrag(e, widget)}
+                  onDragStart={e => dragStartItemHandler(e, widget)}
                   onDragOver={e=> dragOverItemHandler(e, widget)}
                   onDragLeave={e=> dragLeaveItemHandler(e, widget) }
+                  // onDrop={e=> dropHandler(e, widget)}
                   disabled={toggle}
                   widgetType={widget}
                   editable={toggle}
