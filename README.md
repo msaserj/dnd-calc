@@ -1,4 +1,4 @@
-<h1 align="center">Glider Shop</h1>
+<h1 align="center">Dnd calculator</h1>
 <h2 align="center">
 
 [//]: # '[![Mentioned in Awesome Vue.js](https://awesome.re/mentioned-badge.svg)](https://github.com/vuejs/awesome-vue)'
@@ -29,12 +29,15 @@
 ## Description
 
 **dnd calculator.**
+<p align="center"><img src="./src/assets/img/dnd-calc.png" width="60%"></p>
 
 [//]: # '<p align="center"><img src="" width="80%"></p>'
 
 ## About the project.
 
 Simple calculator with drag and drop elements
+
+
 
 ## Technologies
 
@@ -60,7 +63,7 @@ yarn start
 ## Future scope
 
 - type for drag events
-- sortable elements
+- sortable elements (done)
 
 ## My Home Page
 
