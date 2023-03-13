@@ -30,8 +30,6 @@
 
 **dnd calculator.**
 
-
-
 [//]: # '<p align="center"><img src="" width="80%"></p>'
 
 ## About the project.
@@ -61,8 +59,8 @@ yarn start
 
 ## Future scope
 
- - type for drag events
- - sortable elements
+- type for drag events
+- sortable elements
 
 ## My Home Page
 

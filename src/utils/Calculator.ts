@@ -18,19 +18,17 @@ export const calculator = (state: StateType) => {
       break;
     case '/':
       if (current === 0) {
-        return calc = "Не определено";
+        return (calc = 'Не определено');
       } else {
-        calc = prev / current
+        calc = prev / current;
       }
 
       break;
   }
   if (calc.toString().length > 13) {
-    let length = calc.toString().length - 1
-    calc = (calc/Math.pow(10, length)).toString().slice(0, 3) + `e-${length}`
-
+    let length = calc.toString().length - 1;
+    calc = (calc / Math.pow(10, length)).toString().slice(0, 3) + `e-${length}`;
   }
 
   return calc.toString();
 };
-

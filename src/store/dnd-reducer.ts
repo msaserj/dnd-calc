@@ -17,6 +17,16 @@ const calcSlice = createSlice({
         state.canvas.push(action.payload.value);
       }
     },
+    sortWidget: (state, action: PayloadAction<{ currentWidget: WidgetsType; widget: WidgetsType }>) => {
+      if (action.payload.currentWidget !== 'display') {
+        const currentIndex = state.canvas.indexOf(action.payload.currentWidget);
+        state.canvas.splice(currentIndex, 1);
+        const widgetIndex = state.canvas.indexOf(action.payload.widget);
+        state.canvas.splice(widgetIndex + 1, 0, action.payload.currentWidget);
+      } else {
+        return state;
+      }
+    },
     deleteWidget: (state, action: PayloadAction<{ value: string }>) => {
       state.canvas = state.canvas.filter(widget => widget !== action.payload.value);
     },
@@ -26,7 +36,7 @@ const calcSlice = createSlice({
   }
 });
 
-export const { dropWidget, setToggle, deleteWidget } = calcSlice.actions;
+export const { dropWidget, setToggle, deleteWidget, sortWidget } = calcSlice.actions;
 
 export const dndReducer = calcSlice.reducer;
 
@@ -36,4 +46,4 @@ export type StateType = {
   toggle: boolean;
 };
 
-export type WidgetsType = "display" | "operators" | "numbers" | "equal" | ""
+export type WidgetsType = 'display' | 'operators' | 'numbers' | 'equal' | '';

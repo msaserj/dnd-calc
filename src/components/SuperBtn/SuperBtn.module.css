@@ -51,3 +51,6 @@
   background: #ffffff;
   padding: 1px;
 }
+.secondary:disabled {
+  background: #93c9ff;
+}

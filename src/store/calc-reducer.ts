@@ -20,11 +20,9 @@ const calcSlice = createSlice({
         } else {
           state.firstNum = `${state.firstNum}${action.payload.value}`;
         }
-
       }
       if (action.payload.value === '0' && state.firstNum === '0') return state;
       if (action.payload.value === '.' && state.firstNum.includes('.')) return state;
-
     },
     setOperatorAC: (state, action: PayloadAction<{ value: string }>) => {
       if (state.firstNum === '0' && state.secondNum === '0') {

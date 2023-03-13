@@ -2,8 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1332df7e-5b33-4ea4-aac1-f785a5e1b6cc" name="Changes" comment="add: gh pages">
+      <change afterPath="$PROJECT_DIR$/src/assets/img/dnd-calc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/dnd-calc2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/dropHere.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/eye.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/selector.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SuperBtn/SuperBtn.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SuperBtn/SuperBtn.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blocks/flexWrapTablo/FlexWrapTablo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/flexWrapTablo/FlexWrapTablo.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/calc-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/calc-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/dnd-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/dnd-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Calculator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Calculator.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,20 +44,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/msa/ReactSamurai/dnd-calc/dnd-calc&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/msa/ReactSamurai/dnd-calc/dnd-calc/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/msa/ReactSamurai/dnd-calc/dnd-calc",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "ts.external.directory.path": "/home/msa/ReactSamurai/dnd-calc/dnd-calc/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/blocks/Operators" />
@@ -53,10 +65,36 @@
       <recent name="$PROJECT_DIR$/src/components/blocks/Equal" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.pretty">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
+    <configuration name="predeploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="predeploy" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="pretty" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="pretty" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.pretty" />
+        <item itemvalue="npm.predeploy" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -70,6 +108,8 @@
       <workItem from="1678276755080" duration="16436000" />
       <workItem from="1678357431229" duration="2318000" />
       <workItem from="1678473929065" duration="18571000" />
+      <workItem from="1678627199023" duration="2120000" />
+      <workItem from="1678631334573" duration="6502000" />
     </task>
     <task id="LOCAL-00001" summary="start: calc layout">
       <created>1678196527247</created>
