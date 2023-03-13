@@ -16,11 +16,7 @@ export const Operators: React.FC<OperatorsType> = ({ disabled }) => {
   return (
     <>
       {opers.map((el, index) => {
-        return (
-          <SuperBtn onClick={() => setOperand(el)} key={index} disabled={disabled}>
-            {el}
-          </SuperBtn>
-        );
+        return <SuperBtn onClick={() => setOperand(el)} key={index} disabled={disabled} children={el} />;
       })}
     </>
   );

@@ -1,12 +1,10 @@
-import React, { BaseHTMLAttributes, DetailedHTMLProps } from 'react';
+import React from 'react';
 import css from './Numbers.module.css';
-import { SuperBtn } from '../../SuperBtn/SuperBtn';
-import { useAppDispatch } from '../../../hooks/hooks';
-import { setNumber } from '../../../store/calc-reducer';
+import {SuperBtn} from '../../SuperBtn/SuperBtn';
+import {useAppDispatch} from '../../../hooks/hooks';
+import {setNumber} from '../../../store/calc-reducer';
 
-type DefaultPropsType = DetailedHTMLProps<BaseHTMLAttributes<HTMLDivElement>, HTMLDivElement>;
-
-type NumbersType = DefaultPropsType & {
+type NumbersType = {
   disabled: boolean;
 };
 
@@ -22,22 +20,16 @@ export const Numbers: React.FC<NumbersType> = ({ disabled, ...restProps }) => {
   return (
     <div className={css.gridTablo} {...restProps}>
       {numbers.map((el, index) => {
-        return (
-          <SuperBtn onClick={() => clickHandler(el)} disabled={disabled} key={index}>
-            {el}
-          </SuperBtn>
-        );
+        return <SuperBtn onClick={() => clickHandler(el)} disabled={disabled} key={index} children={el} />;
       })}
       <SuperBtn
         onClick={() => clickHandler('0')}
         disabled={disabled}
         style={{ gridRow: '4', gridColumnStart: '1', gridColumnEnd: '3' }}
-      >
-        0
-      </SuperBtn>
-      <SuperBtn onClick={() => clickHandler('.')} disabled={disabled}>
-        ,
-      </SuperBtn>
+        children={'0'}
+      />
+
+      <SuperBtn onClick={() => clickHandler('.')} disabled={disabled} children={','} />
     </div>
   );
 };

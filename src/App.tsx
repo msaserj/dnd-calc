@@ -20,6 +20,7 @@ const App = () => {
   const dragStartItemHandler = (e: React.DragEvent, widget: WidgetsType) => {
     setCurrentWidget(widget);
   };
+
   const dragStartPaletteHandler = (e: React.DragEvent, widget: WidgetsType) => {
     setCurrentWidget(widget);
     setStopFunc(false);
@@ -33,23 +34,27 @@ const App = () => {
     }
     setStopFunc(true);
   };
+
   const dropItemHandler = (e: any, widget: WidgetsType) => {
     e.preventDefault();
     e.target.style.boxShadow = 'none';
     stopFunc && dispatch(sortWidget({ currentWidget, widget }));
   };
+
   const dragOverItemHandler = (e: any, widget: WidgetsType) => {
     e.preventDefault();
     if (canvas.includes(widget)) {
       e.target.style.boxShadow = '0 6px 12px #8DB3FFFF';
     }
   };
+
   const dragLeaveItemHandler = (e: any, widget: WidgetsType) => {
     e.preventDefault();
     if (canvas.includes(widget)) {
       e.target.style.boxShadow = 'none';
     }
   };
+
   const dragOverHandler = (e: any) => {
     e.preventDefault();
     if (!canvas.length) {
@@ -60,6 +65,7 @@ const App = () => {
   const deleteHandler = (widget: string) => {
     dispatch(deleteWidget({ value: widget }));
   };
+
   const dragLeaveHandler = (e: any) => {
     e.preventDefault();
     e.target.style.backgroundColor = 'white';

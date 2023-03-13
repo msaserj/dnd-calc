@@ -1,21 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1332df7e-5b33-4ea4-aac1-f785a5e1b6cc" name="Changes" comment="add: gh pages">
-      <change afterPath="$PROJECT_DIR$/src/assets/img/dnd-calc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/dnd-calc2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/dropHere.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/eye.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/selector.svg" afterDir="false" />
+    <list default="true" id="1332df7e-5b33-4ea4-aac1-f785a5e1b6cc" name="Changes" comment="fix: some dnd problems">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/SuperBtn/SuperBtn.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SuperBtn/SuperBtn.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/blocks/flexWrapTablo/FlexWrapTablo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/flexWrapTablo/FlexWrapTablo.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/calc-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/calc-reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/dnd-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/dnd-reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Calculator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Calculator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blocks/Equal/Equal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/Equal/Equal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blocks/Numbers/Numbers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/Numbers/Numbers.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blocks/Operators/Operators.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blocks/Operators/Operators.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +101,7 @@
       <workItem from="1678357431229" duration="2318000" />
       <workItem from="1678473929065" duration="18571000" />
       <workItem from="1678627199023" duration="2120000" />
-      <workItem from="1678631334573" duration="6502000" />
+      <workItem from="1678631334573" duration="7181000" />
     </task>
     <task id="LOCAL-00001" summary="start: calc layout">
       <created>1678196527247</created>
@@ -216,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678626072434</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="fix: some dnd problems">
+      <created>1678695805568</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1678695805568</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,6 +249,7 @@
     <MESSAGE value="refactoring" />
     <MESSAGE value="awesome readme" />
     <MESSAGE value="add: gh pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: gh pages" />
+    <MESSAGE value="fix: some dnd problems" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: some dnd problems" />
   </component>
 </project>
